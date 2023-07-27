@@ -40,7 +40,7 @@ body {
 }
 
 main > section:nth-child(n + 1) {
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 1.25rem 1.15rem;
 }
 
@@ -105,18 +105,19 @@ main > section:nth-child(n + 1) {
     border-radius: 3px;
     width: 100%;
     height: 50px;
+    margin-bottom: 0.652rem;
 }
 
 .spending__total {
     display: flex;
     justify-content: space-between;
-    font-size: 0.85rem;
 }
 .spending__total > * {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 0.5rem;
+    font-size: 0.8rem;
 }
 
 .total__diff {
@@ -127,7 +128,7 @@ main > section:nth-child(n + 1) {
 
 .total__value {
     color: var(--clr-neutral-800);
-    font-size: 1.6rem;
+    font-size: 2em;
     font-weight: var(--fw-bold);
 }
 
@@ -135,4 +136,33 @@ main > section:nth-child(n + 1) {
     color: var(--clr-neutral-800);
     font-weight: var(--fw-bold);
     font-size: 0.9rem;
+}
+
+@media (min-width: 800px) {
+    main {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+    .balance__title {
+        font-size: 1rem;
+    }
+    .balance__value {
+        font-size: 1.75rem;
+    }
+    .graph__title {
+        font-size: 1.75rem;
+    }
+    .graph__bars {
+        font-size: 0.8125rem;
+        gap: 1rem;
+    }
+    .spending__total > * {
+        font-size: 1rem;
+    }
+    .total__value {
+        font-size: 2.5em;
+    }
+    main > section:nth-child(3) {
+        padding: 2rem 1.75rem;
+    }
 }
