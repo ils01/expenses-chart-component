@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- displays site properly based on user's device -->
+
+        <title>Frontend Mentor | Expenses chart component</title>
 
         <link
             rel="icon"
@@ -11,17 +12,23 @@
             sizes="32x32"
             href="./images/favicon-32x32.png"
         />
+        <!-- CSS -->
         <link
             rel="stylesheet"
             href="./node_modules/normalize.css/normalize.css"
         />
         <link rel="stylesheet" href="style.css" />
-
-        <title>Frontend Mentor | Expenses chart component</title>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <main>
-            <h1>Expenses chart</h1>
+            <h1 class="sr-only">Expenses chart</h1>
             <section class="balance">
                 <div class="balance__info">
                     <div class="balance__title">My balance</div>
@@ -31,6 +38,7 @@
                     <img src="./images/logo.svg" alt="" />
                 </div>
             </section>
+
             <section class="spending">
                 <div class="spending__graph graph">
                     <h2 class="graph__title">Spending - Last 7 days</h2>
@@ -65,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="speding__total total">
+                <div class="spending__total total">
                     <div>
                         <div class="total__title">Total this month</div>
                         <div class="total__value">$478.33</div>
