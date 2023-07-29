@@ -127,6 +127,10 @@ main > section:nth-child(n + 1) {
     margin-bottom: 0.652rem;
 }
 
+.bar__bar:hover {
+    cursor: pointer;
+}
+
 .bar__amount {
     border-radius: 5px;
     font-weight: var(--fw-bold);
