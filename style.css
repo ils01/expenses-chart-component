@@ -54,6 +54,10 @@ main > section:nth-child(n + 1) {
     padding: 1.25rem 1.15rem;
 }
 
+.hidden {
+    display: none;
+}
+
 .balance {
     background-color: var(--clr-primary-red);
     color: var(--clr-neutral-200);
@@ -105,7 +109,7 @@ main > section:nth-child(n + 1) {
 .graph__bars {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 0.7rem;
+    gap: 2%;
     font-size: 0.65rem;
     justify-items: center;
     align-items: end;
@@ -121,6 +125,19 @@ main > section:nth-child(n + 1) {
     border-radius: 3px;
     height: 50px;
     margin-bottom: 0.652rem;
+}
+
+.bar__amount {
+    border-radius: 5px;
+    font-weight: var(--fw-bold);
+    width: 120%;
+    position: relative;
+    left: -10%;
+    margin-inline: auto;
+    margin-bottom: 0.45rem;
+    background-color: var(--clr-neutral-800);
+    color: var(--clr-neutral-300);
+    padding-block: 0.4em;
 }
 
 .spending__total {

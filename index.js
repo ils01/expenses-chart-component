@@ -1,4 +1,6 @@
 const barElts = document.getElementsByClassName("bar__bar");
+const barAmounts = document.getElementsByClassName("bar__amount");
+const maxBarHeight = 175;
 
 const today = new Date()
     .toLocaleString("en-us", { weekday: "long" })
@@ -20,12 +22,22 @@ function parseData(data) {
         if (data[i].day === today) {
             barElts[i].style.backgroundColor = "var(--clr-primary-cyan)";
         }
+        barAmounts[i].textContent = `$${data[i].amount}`;
     }
 
-    barElts[maxIndex].style.height = "150px";
+    barElts[maxIndex].style.height = `${maxBarHeight}px`;
 
     for (let i = 0; i < data.length; i += 1) {
-        const height = (data[i].amount * 150) / data[maxIndex].amount;
+        const height = (data[i].amount * maxBarHeight) / data[maxIndex].amount;
         barElts[i].style.height = `${height}px`;
     }
+
+    [...barElts].forEach((element) => {
+        element.addEventListener("click", function (event) {
+            if (this.style.opacity === "0.7") this.style.opacity = 1;
+            else this.style.opacity = "0.7";
+
+            this.previousElementSibling.classList.toggle("hidden");
+        });
+    });
 }
